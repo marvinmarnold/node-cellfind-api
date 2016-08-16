@@ -1,0 +1,8 @@
+{
+  "CELLFIND_USER_ID": 123,
+  "CELLFIND_PASSWORD": "PASSWORD",
+  "CELLFIND_SOAP_ENDPOINT": "http://www.cellfindportal.co.za/LBSAggregationService/Service.svc/soap",
+  "CELLFIND_LOCATEE": "27555555555",
+  "CELLFIND_LOCATOR": "27555555555",
+  "CELLFIND_APPNAME": "123"
+}

@@ -19,8 +19,19 @@ const getLocation = (appName, contactId, locatee, locator) => {
     if(consented) {
       location = locate(lId, token)
 
-      if(location)
-        LbsLookups.update(lId, {$set: location})
+      if(location) {
+        // DO NOT STORE GPS LINKED TO PHONE NUMBER
+        LbsLookups.update(lId, {$set: {
+          accuracy: location.accuracy,
+          network: location.network,
+          locatorMSISDN: location.locatorMSISDN,
+          locateeMSISDN: location.locateeMSISDN,
+          locatedAt: location.locatedAt
+        }})
+
+        // So it can be looked up later
+        location._id = lId
+      }
     }
   }
 

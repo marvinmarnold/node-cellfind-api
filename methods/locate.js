@@ -7,7 +7,6 @@ import { envelope, xmlRoot } from './helpers.js';
 import { LbsLookups } from '../common/lbs-lookups.js';
 
 export const locate = (lId, token) => {
-  console.log('locate');
   const l = LbsLookups.findOne(lId)
 
   const obj = _.clone(envelope)
@@ -34,6 +33,7 @@ export const locate = (lId, token) => {
   })
 
   const parse = Meteor.wrapAsync(parseString)
+
   const r = parse(resp.content)["s:Envelope"]["s:Body"][0]["GetLocationResponse"][0]["GetLocationResult"][0]
 
   return {

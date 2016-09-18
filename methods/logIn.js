@@ -7,8 +7,6 @@ import { envelope, xmlRoot } from './helpers.js';
 import { LbsLookups } from '../common/lbs-lookups.js';
 
 export const logIn = (appName, contactId, locatee, locator) => {
-  console.log('logIn');
-
   lId = LbsLookups.insert({
     consentedAt: new Date(),
     contactId: contactId,

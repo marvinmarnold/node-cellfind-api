@@ -6,8 +6,6 @@ import { parseString } from 'xml2js';
 import { envelope, xmlRoot } from './helpers.js';
 
 export const logOut = (token) => {
-  console.log('logOut');
-
   const obj = _.clone(envelope)
   obj['soap:Envelope']['soap:Body'] = {
     "tns:LogOut": {

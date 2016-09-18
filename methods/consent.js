@@ -7,7 +7,6 @@ import { envelope, xmlRoot } from './helpers.js';
 import { LbsLookups } from '../common/lbs-lookups.js';
 
 export const consent = (lId, token) => {
-  console.log('consent');
   const l = LbsLookups.findOne(lId)
 
   const obj = _.clone(envelope)

@@ -13,7 +13,6 @@ const getLocation = (appName, contactId, locatee, locator) => {
 
   if(lId && token) {
     const consented = consent(lId, token)
-    console.log("Consented: " + consented);
 
     // Check location if user consented
     if(consented) {
@@ -36,8 +35,8 @@ const getLocation = (appName, contactId, locatee, locator) => {
   }
 
   // Close session
-  if(token)
-    console.log("Logged out: " + logOut(token))
+  // if(token)
+  //   console.log("Logged out: " + logOut(token))
 
   return location
 }

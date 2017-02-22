@@ -29,6 +29,7 @@ export const locate = (lId, token) => {
       "SOAPAction": "http://tempuri.org/ILBSService/GetLocation",
       "Content-Type": "text/xml;charset=UTF-8"
     },
+		timeout: 9 * 1000,
     content: xml.end()
   })
 
